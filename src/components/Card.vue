@@ -9,8 +9,15 @@
 </template>
 
 <script>
+import api from '@/services/api.js';
+
 export default {
   name: 'Card-Pokemon',
+  mounted(){
+      api.get('/ditto').then(response => {
+          console.log(response.data)
+      })
+  }
 }
 </script>
 
