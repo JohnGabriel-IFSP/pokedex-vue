@@ -1,13 +1,16 @@
 <template>
         <div class="container-button">
           <button class="AddTeam" @click.prevent.stop="addTeam">+</button>
+          <Toast/>
         </div>
 </template>
 
 <script>
+import Toast from '@/components/Toast.vue'
 export default {
   name: 'Button-Add',
   components: {
+    Toast
   },
   data(){
       return{
@@ -28,10 +31,16 @@ export default {
             this.team[this.count].nome = this.$store.state.pokemon.nome
             this.team[this.count].url = this.$store.state.pokemon.url
             this.count++
+            this.trigger()
             if(this.count===6){
                 this.$store.dispatch('saveTeam', this.team)
             }
-        }
+        },
+        trigger(){
+                var x = document.getElementById("ComponentToast");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
     },
 }
 </script>
