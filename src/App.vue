@@ -1,17 +1,18 @@
 <template>
   <div>
-    <Content/>
+    <NavBar />
+    <router-view />
   </div>
 </template>
 
 <script>
 import './styles/global.css';
-import Content from './components/Content'
+import NavBar from '@/components/NavBar'
 
 export default {
   name: 'App',
   components: {
-    Content
+    NavBar
   }
 }
 </script>

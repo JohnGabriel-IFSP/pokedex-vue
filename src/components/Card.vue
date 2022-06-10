@@ -1,6 +1,6 @@
 <template>
     <div id="Card-Pokemon">
-        <img src="https://assets.nintendo.com/image/upload/ar_4:3,c_pad,dpr_2.0,f_auto,q_auto,w_400/v1/ncom/en_US/games/switch/p/pokemon-legends-arceus-switch/egdp/pokemon-2"/>
+        <img src="https://gibao.com.br/wp-content/uploads/2018/11/blog-ph.jpg"/>
         <div class="container">
             <h4>Rowlet</h4>
             <p>#721</p>
@@ -9,15 +9,9 @@
 </template>
 
 <script>
-import api from '@/services/api.js';
 
 export default {
   name: 'Card-Pokemon',
-  mounted(){
-      api.get('/ditto').then(response => {
-          console.log(response.data)
-      })
-  }
 }
 </script>
 
@@ -26,7 +20,7 @@ export default {
         max-width: 380px;
         max-height: 250px;
         background-color: white;
-        box-shadow: 10px 10px 15px black;
+        box-shadow: 5px 5px 10px black;
         border-radius: 10px;
         display: flex;
         align-items: center;

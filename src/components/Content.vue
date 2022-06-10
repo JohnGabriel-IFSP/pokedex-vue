@@ -1,14 +1,17 @@
 <template>
-    <div id="Content-Pokedex">
+    <div class="Content-Pokedex">
+        <SearchBox/>
         <Card/>
     </div>
 </template>
 
 <script>
 import Card from './Card';
+import SearchBox from '../components/SearchBox'
 export default {
   name: 'Content-Pokedex',
   components: {
+    SearchBox,
     Card
   }
 }
@@ -20,6 +23,7 @@ export default {
         height: 100vh;
         padding-top: 50px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 </style>
