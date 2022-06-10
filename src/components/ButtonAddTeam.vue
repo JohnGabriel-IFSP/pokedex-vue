@@ -14,27 +14,16 @@ export default {
   },
   data(){
       return{
-          count: 0,
-          team:[
-              {id:'', nome: '', url: '',},
-              {id:'', nome: '', url: '',},
-              {id:'', nome: '', url: '',},
-              {id:'', nome: '', url: '',},
-              {id:'', nome: '', url: '',},
-              {id:'', nome: '', url: '',},
-          ]
+          team:[]
       }
   },
    methods:{
         addTeam(){
-            this.team[this.count].id = this.$store.state.pokemon.id
-            this.team[this.count].nome = this.$store.state.pokemon.nome
-            this.team[this.count].url = this.$store.state.pokemon.url
-            this.count++
+            this.team.push(this.$store.state.pokemon.id)
+            this.team.push(this.$store.state.pokemon.nome)
+            this.team.push(this.$store.state.pokemon.url)
+            this.$store.dispatch('saveTeam', this.team)
             this.trigger()
-            if(this.count===6){
-                this.$store.dispatch('saveTeam', this.team)
-            }
         },
         trigger(){
                 var x = document.getElementById("ComponentToast");

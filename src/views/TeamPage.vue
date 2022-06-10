@@ -17,7 +17,7 @@ export default{
     name:'TeamPage',
     data(){
         return{
-            teamSize:6,
+            teamSize: 6,
         }
     }
 }
