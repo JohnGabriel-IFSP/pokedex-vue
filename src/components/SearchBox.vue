@@ -18,7 +18,7 @@ import api from '@/services/api.js';
         },
         methods:{
             search(){
-                api.get(`/${this.parametro}`).then(response => {
+                api.get(`/${this.parametro.toLowerCase()}`).then(response => {
                     this.$store.dispatch('saveResponse', response.data)
                 })
             }
