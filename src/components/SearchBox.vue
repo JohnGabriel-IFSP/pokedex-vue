@@ -22,7 +22,7 @@ import api from '@/services/api.js';
                     this.$store.dispatch('saveResponse', response.data)
                 })
             }
-        }
+        },
     }
     
 </script>

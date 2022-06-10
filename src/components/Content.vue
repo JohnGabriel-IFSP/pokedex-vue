@@ -1,26 +1,26 @@
 <template>
     <div class="Content-Pokedex">
         <Card/>
+        <ButtonAddTeam/>
     </div>
 </template>
 
 <script>
 import Card from './Card';
+import ButtonAddTeam from './ButtonAddTeam.vue';
 export default {
   name: 'Content-Pokedex',
   components: {
-    Card
+    Card,
+    ButtonAddTeam
   }
 }
 </script>
 
 <style scoped>
-    div{
+    .Content-Pokedex{
         width: 100%;
         padding-top: 50px;
         display: flex;
-        justify-content: center;
-      
-      /* criar midia querie para desktop */
     }
 </style>

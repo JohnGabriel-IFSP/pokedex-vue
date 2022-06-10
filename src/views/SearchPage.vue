@@ -1,7 +1,9 @@
 <template>
     <div class="SearchPage">
         <SearchBox/>
-        <Content/>
+        <div class="container-content">
+            <Content/>
+        </div>
     </div>
 </template>
 
@@ -15,7 +17,6 @@ export default{
         Content
   }
 }
-
 </script>
 
 <style scoped>
@@ -23,6 +24,11 @@ export default{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+
+    .container-content{
+        display: flex;
         align-items: center;
     }
 </style>
