@@ -1,25 +1,40 @@
 <template>
     <div class="Search-Box">
-        <input type="text"/>
-        <button>Search Pokemon</button>
+        <input v-model="parametro" type="text"/>
+        <button @click.prevent.stop="search">Search Pokemon</button>
     </div>
 </template>
 
 <script>
+import api from '@/services/api.js';
     export default{
         name:'Search-Box',
+        components:{
+        },
+        data(){
+            return{
+                parametro: ''
+            }
+        },
+        methods:{
+            search(){
+                api.get(`/${this.parametro}`).then(response => {
+                    this.$store.dispatch('saveResponse', response.data)
+                })
+            }
+        }
     }
-
+    
 </script>
 
 <style scoped>
     .Search-Box{
         width: 75%;
-        height: 100px;
+        height: 50px;
+        padding-top: 30px;
         display: flex;
         flex-direction: row;
         gap: 15px;
-        margin-bottom: 10px;
     }
     .Search-Box input{
         width: 100%;

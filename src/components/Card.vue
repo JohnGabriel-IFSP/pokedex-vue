@@ -1,9 +1,15 @@
 <template>
     <div id="Card-Pokemon">
-        <img src="https://gibao.com.br/wp-content/uploads/2018/11/blog-ph.jpg"/>
+        <!-- <img src={{pokemon.sprites.other.dream_world.front_default}}/>
         <div class="container">
-            <h4>Rowlet</h4>
-            <p>#721</p>
+            <h4>{{pokemon.nome}}</h4>
+            <p>#{{pokemon.id}}</p>
+        </div> -->
+
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/94.svg"/>
+        <div class="container">
+            <h4>Gengar</h4>
+            <p>#094</p>
         </div>
     </div>
 </template>
